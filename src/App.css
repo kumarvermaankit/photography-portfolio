@@ -360,6 +360,7 @@ font-size: 1.4em;
   
   nav{
     transform: scale(0.8);
+    left: 10%;
   }
 }
 
@@ -493,7 +494,7 @@ font-size: 1.4em;
 
 @media only screen and (max-width: 768px) {
   nav {
-    left: 31%;
+    left: 11%;
   }
 
   .gallery {
@@ -521,9 +522,9 @@ font-size: 1.4em;
   }
 
   nav {
-    left: 15%;
+    left: 8.2%;
     bottom: 50px;
-    transform: scale(.9);
+    transform: scale(0.8);
   }
 
   .gallery {
