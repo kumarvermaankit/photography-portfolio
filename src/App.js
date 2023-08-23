@@ -15,7 +15,7 @@ const App = () => {
   const importAll = (r) => r.keys().map(r);
 
   const getImageUrls = () => {
-   const imageContext = require.context('./images', false, /\.(png|jpe?g|svg)$/);
+   const imageContext = require.context('./tempImages', false, /\.(png|jpe?g|svg)$/);
    const imageUrls = importAll(imageContext).map((imageModule) => imageModule);
    return imageUrls;
  };

@@ -197,13 +197,13 @@ h1 {
   visibility: visible;
 }
 
-.about p {
+/* .about p {
   color: #fff;
   font-size: 2em;
   text-align: center;
   margin: 30px auto;
   animation: slideup .5s linear .7s backwards;
-}
+} */
 
 /* .about div {
   margin: 20px auto;

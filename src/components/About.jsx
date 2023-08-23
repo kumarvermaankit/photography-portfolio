@@ -35,8 +35,8 @@ const About = () => {
                     while I was still a kid.
                     Then I realised, I grew with a longing which isn't for a person or a thing. It's something far
                     more than that and I found that this craving can be satisfied by photography. </p>
-                    <div><img src="../about-img/about1.jpg" alt="pro-pic" />
-                    <img src="../about-img/about2.jpg" alt="pro-pic" /></div>
+                    <div><img src="../about-img/about1.jpg" alt="pro-pic" /></div>
+                    <div><img src="../about-img/about2.jpg" alt="pro-pic" /></div>
                 <p>Photography was my hobby, even when I was a kid I was fascinated by the pictures that I would come
                     across over the
                     internet or books or even newspapers.As I grew up, this hobby grew bigger and consumed more and more
