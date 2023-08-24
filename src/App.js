@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Portfolio from './components/Portfolio'
 import Blogs from './components/Blogs'
 import About from './components/About'
+import About2 from './components/About2'
 import Navigations from './components/Navigations'
 import {storage} from './firebaseimage'
 import { ref, list, listAll, getDownloadURL } from "firebase/storage"
@@ -15,7 +16,7 @@ const App = () => {
   const importAll = (r) => r.keys().map(r);
 
   const getImageUrls = () => {
-   const imageContext = require.context('./tempImages', false, /\.(png|jpe?g|svg)$/);
+   const imageContext = require.context('./images', false, /\.(png|jpe?g|svg)$/);
    const imageUrls = importAll(imageContext).map((imageModule) => imageModule);
    return imageUrls;
  };
@@ -64,7 +65,7 @@ const App = () => {
       <Route path='/' element={<Home />} />
       <Route path='/portfolio' element={<Portfolio img={img} />} />
       <Route path='/blogs' element={<Blogs />} />
-      <Route path='/about' element={<About />} />
+      <Route path='/about' element={<About2 />} />
     </Routes>
     <Navigations />
     </>

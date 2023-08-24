@@ -215,9 +215,8 @@ h1 {
 } */
 
 .about img {
-  width: 600px;
-  /* Calculate height in a way so that it's always in accordance with width do it would be responsive*/
-  height: 600px;
+  width: 300px;
+  height: 300px;
   margin-left: 8%;
 }
 
@@ -238,7 +237,7 @@ div.container a {
 }
 
 
-/* .about {
+.about {
   text-align: center;
   padding: 20px;
 }
@@ -283,7 +282,7 @@ div.container a {
 }
 
 
-
+/* 
 @media screen and (min-width: 768px) {
   .about {
     padding: 40px;

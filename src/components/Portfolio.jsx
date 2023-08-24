@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import withImageLoader from 'react-image-loader-hoc';
+// import LazyLoad from 'react-lazy-load';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Portfolio = ({img}) => {
   const [cursorX, setCursorX] = useState()
   const [cursorY, setCursorY] = useState()
@@ -20,7 +22,7 @@ const Portfolio = ({img}) => {
             return (
               <div className="img-cont" key={val.id}>
                 {/* <img src={val} alt="" width='100px' height='100px' /> */}
-                <ImageWithLoader
+                <LazyLoadImage
             src={val}
             width="100px"
             height="100px"
