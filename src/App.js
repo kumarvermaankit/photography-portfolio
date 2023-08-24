@@ -16,7 +16,7 @@ const App = () => {
   const importAll = (r) => r.keys().map(r);
 
   const getImageUrls = () => {
-   const imageContext = require.context('./images', false, /\.(png|jpe?g|svg)$/);
+   const imageContext = require.context('./newImages', false, /\.(png|jpe?g|svg)$/);
    const imageUrls = importAll(imageContext).map((imageModule) => imageModule);
    return imageUrls;
  };
@@ -35,6 +35,15 @@ const App = () => {
   //   URL.revokeObjectURL(url);
   // };
 
+  function extractPicNumber(str) {
+    const match = str.match(/pic-\s*(\d+)/i);
+    if (match) {
+      console.log(match)
+      return parseInt(match[1]);
+    }
+    return -1; // Return a placeholder for strings without a valid pic number
+  }
+
   const getData = async () => {
     // fetch('https://drive.google.com/drive/folders/1-qdpiWiXMRzdKhOl6-KfQxNwEBDS-Zz5?usp=sharing').then(function (response) {
     //   // return response.json();
@@ -51,8 +60,15 @@ const App = () => {
   
     // const urls = await Promise.all(urlPromises);
     // if(urls.length > 0) downloadJSONFile(urls, 'images.json')
-    console.log(getImageUrls())
-    setImg(getImageUrls())
+    const data = getImageUrls()
+    console.log(data)
+    const sortedData = data.slice().sort((a, b) => {
+      const picNumberA = extractPicNumber(a);
+      const picNumberB = extractPicNumber(b);
+      return picNumberA - picNumberB;
+    });
+    console.log(sortedData)
+    setImg(sortedData)
   }
 
   useEffect(() => {
@@ -65,7 +81,7 @@ const App = () => {
       <Route path='/' element={<Home />} />
       <Route path='/portfolio' element={<Portfolio img={img} />} />
       <Route path='/blogs' element={<Blogs />} />
-      <Route path='/about' element={<About2 />} />
+      <Route path='/about' element={<About />} />
     </Routes>
     <Navigations />
     </>
