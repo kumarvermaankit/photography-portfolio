@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import withImageLoader from 'react-image-loader-hoc';
 // import LazyLoad from 'react-lazy-load';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import pls from '../tempImages/pic- 1.jpg'
 const Portfolio = ({img}) => {
   const [cursorX, setCursorX] = useState()
   const [cursorY, setCursorY] = useState()
@@ -24,8 +25,10 @@ const Portfolio = ({img}) => {
                 {/* <img src={val} alt="" width='100px' height='100px' /> */}
                 <LazyLoadImage
             src={val}
-            width="100px"
-            height="100px"
+            effect="blur"
+            width='100%' 
+            height='100%'
+            // placeholderSrc={pls}
           />
               </div>
             )
